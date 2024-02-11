@@ -1,7 +1,7 @@
-import Desktop from './components/Desktop';
+import Space from './components/Space';
 
 export default function Home() {
   return (
-    <Desktop />
+    <Space />
   );
 };

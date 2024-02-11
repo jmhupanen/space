@@ -1,13 +1,16 @@
 'use client';
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
-import styles from './Desktop.module.css';
+import { OrbitControls } from '@react-three/drei';
+import Desktop from '../../public/Desktop';
+import styles from './Space.module.css';
 
-const Desktop = () => {
+const Space = () => {
   return (
     <main className={styles.main}>
         <Canvas>
             <ambientLight intensity={2}/>
+            <OrbitControls />
             <Mesh />
         </Canvas>
     </main>
@@ -17,9 +20,9 @@ const Desktop = () => {
 function Mesh() {
     return (
         <mesh>
-            <boxGeometry />
+            <Desktop />
         </mesh>
     );
 };
 
-export default Desktop;
+export default Space;
